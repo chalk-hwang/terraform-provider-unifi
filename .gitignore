@@ -4,3 +4,4 @@
 dist
 terraform-provider-unifi
 terraform-provider-unifi.exe
+.history
