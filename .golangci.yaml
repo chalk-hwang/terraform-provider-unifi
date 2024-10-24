@@ -11,7 +11,7 @@ linters:
     - "nakedret"
     - "nilerr"
     - "staticcheck"
-    - "structcheck"
+    # - "structcheck"
     - "unconvert"
     - "unused"
 
