@@ -7,7 +7,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/sayedh/go-unifi/unifi"
+	"github.com/chalk-hwang/go-unifi/unifi"
 	// "github.com/paultyng/go-unifi/unifi" (old go-unifi version)
 )
 
@@ -258,7 +258,7 @@ func resourcePortProfile() *schema.Resource {
 			// 	Elem:        &schema.Schema{Type: schema.TypeString},
 			// },
 
-			// New update from sayedh/go-unifi - UnifiVersion = "8.3.32"
+			// New update from chalk-hwang/go-unifi - UnifiVersion = "8.3.32"
 			"tagged_vlan_mgmt": {
 				Description: "The VLAN management type for the port profile. Can be one of 'auto', 'block_all', or 'custom'.",
 				Type:        schema.TypeString,
@@ -368,7 +368,7 @@ func resourcePortProfileGetResourceData(d *schema.ResourceData) (*unifi.PortProf
 		// Deprecated from paultyng/go-unifi - UnifiVersion = "7.4.162"
 		// TaggedNetworkIDs:             taggedNetworkconfIds,
 
-		// New update from sayedh/go-unifi - UnifiVersion = "8.3.32"
+		// New update from chalk-hwang/go-unifi - UnifiVersion = "8.3.32"
 		TaggedVLANMgmt: d.Get("tagged_vlan_mgmt").(string),
 
 		VoiceNetworkID: d.Get("voice_networkconf_id").(string),
@@ -414,7 +414,7 @@ func resourcePortProfileSetResourceData(resp *unifi.PortProfile, d *schema.Resou
 	// Deprecated from paultyng/go-unifi - UnifiVersion = "7.4.162"
 	// d.Set("tagged_networkconf_ids", stringSliceToSet(resp.TaggedNetworkIDs))
 
-	// New update from sayedh/go-unifi - UnifiVersion = "8.3.32"
+	// New update from chalk-hwang/go-unifi - UnifiVersion = "8.3.32"
 	d.Set("tagged_vlan_mgmt", resp.TaggedVLANMgmt)
 
 	d.Set("voice_networkconf_id", resp.VoiceNetworkID)

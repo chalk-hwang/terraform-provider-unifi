@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/sayedh/go-unifi/unifi"
+	"github.com/chalk-hwang/go-unifi/unifi"
 )
 
 func resourceDevice() *schema.Resource {

@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/sayedh/go-unifi/unifi"
+	"github.com/chalk-hwang/go-unifi/unifi"
 	// "github.com/paultyng/go-unifi/unifi" (old go-unifi version)
 )
 
@@ -287,7 +287,7 @@ func resourceNetwork() *schema.Resource {
 				Optional:    true,
 			},
 
-			// New update from sayedh/go-unifi - UnifiVersion = "8.3.32"
+			// New update from chalk-hwang/go-unifi - UnifiVersion = "8.3.32"
 			"network_isolation_enabled": {
 				Description: "Specifies whether network isolation is enabled for this network.",
 				Type:        schema.TypeBool,
@@ -484,7 +484,7 @@ func resourceNetworkGetResourceData(d *schema.ResourceData, meta interface{}) (*
 		}
 	}
 
-	// New update from sayedh/go-unifi - UnifiVersion = "8.3.32"
+	// New update from chalk-hwang/go-unifi - UnifiVersion = "8.3.32"
 	if v, ok := d.GetOk("network_isolation_enabled"); ok {
 		if boolValue, isBool := v.(bool); isBool {
 			network.NetworkIsolationEnabled = boolValue
@@ -690,7 +690,7 @@ func resourceNetworkSetResourceData(resp *unifi.Network, d *schema.ResourceData,
 	d.Set("ipv6_static_subnet", resp.IPV6Subnet)
 	d.Set("multicast_dns", resp.MdnsEnabled)
 
-	// New update from sayedh/go-unifi - UnifiVersion = "8.3.32"
+	// New update from chalk-hwang/go-unifi - UnifiVersion = "8.3.32"
 	d.Set("network_isolation_enabled", resp.NetworkIsolationEnabled)
 
 	d.Set("wan_dhcp_v6_pd_size", resp.WANDHCPv6PDSize)

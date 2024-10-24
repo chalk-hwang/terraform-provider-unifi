@@ -1,4 +1,4 @@
-<!-- ![Acceptance Tests](https://github.com/sayedh/terraform-provider-unifi/workflows/Acceptance%20Tests/badge.svg?event=push) -->
+<!-- ![Acceptance Tests](https://github.com/chalk-hwang/terraform-provider-unifi/workflows/Acceptance%20Tests/badge.svg?event=push) -->
 
 # Unifi Terraform Provider (terraform-provider-unifi)
 
@@ -6,7 +6,7 @@ This project is a fork of [paultyng/terraform-provider-unifi](https://github.com
 
 ## Documentation
 
-Browse the official provider documentation on the [Terraform provider registry](https://registry.terraform.io/providers/sayedh/unifi/latest/docs).
+Browse the official provider documentation on the [Terraform provider registry](https://registry.terraform.io/providers/chalk-hwang/unifi/latest/docs).
 
 ## Supported UniFi Controller Versions
 
@@ -32,7 +32,7 @@ Other resources and data sources **may not yet be fully functional** on the late
 
 ### Terraform 1.0 and Above
 
-You can use the provider via the [Terraform provider registry](https://registry.terraform.io/providers/sayedh/unifi/latest).
+You can use the provider via the [Terraform provider registry](https://registry.terraform.io/providers/chalk-hwang/unifi/latest).
 
 **Note**: When using this provider, ensure you're connected via a hard-wired connection to the UniFi Controller rather than WiFi, as configuring your network over a connection that could disconnect (like WiFi) is risky and may result in issues.
 
@@ -57,11 +57,11 @@ The provider has been versioned with the goal of maintaining backward compatibil
 
 ## Note on UniFi Go SDK
 
-This provider relies on the [go-unifi SDK](https://github.com/sayedh/go-unifi), also forked from [Paul Tyng's original SDK](https://github.com/paultyng/go-unifi), to interact with the UniFi Controller. Code generation and updates to the SDK are performed to support the latest UniFi Controller features.
+This provider relies on the [go-unifi SDK](https://github.com/chalk-hwang/go-unifi), also forked from [Paul Tyng's original SDK](https://github.com/paultyng/go-unifi), to interact with the UniFi Controller. Code generation and updates to the SDK are performed to support the latest UniFi Controller features.
 
 ## Contributing
 
-Contributions are highly appreciated to ensure better compatibility with the latest UniFi Network versions. Please submit issues and pull requests to the [GitHub repository](https://github.com/sayedh/terraform-provider-unifi).
+Contributions are highly appreciated to ensure better compatibility with the latest UniFi Network versions. Please submit issues and pull requests to the [GitHub repository](https://github.com/chalk-hwang/terraform-provider-unifi).
 
 ## Disclaimer
 
