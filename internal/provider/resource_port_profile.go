@@ -342,7 +342,7 @@ func resourcePortProfileGetResourceData(d *schema.ResourceData) (*unifi.PortProf
 		Isolation:                    d.Get("isolation").(bool),
 		LldpmedEnabled:               d.Get("lldpmed_enabled").(bool),
 		LldpmedNotifyEnabled:         d.Get("lldpmed_notify_enabled").(bool),
-		NATiveNetworkID:              d.Get("native_networkconf_id").(string),
+		NativeNetworkID:              d.Get("native_networkconf_id").(string),
 		Name:                         d.Get("name").(string),
 		OpMode:                       d.Get("op_mode").(string),
 		PoeMode:                      d.Get("poe_mode").(string),
@@ -388,7 +388,7 @@ func resourcePortProfileSetResourceData(resp *unifi.PortProfile, d *schema.Resou
 	d.Set("isolation", resp.Isolation)
 	d.Set("lldpmed_enabled", resp.LldpmedEnabled)
 	d.Set("lldpmed_notify_enabled", resp.LldpmedNotifyEnabled)
-	d.Set("native_networkconf_id", resp.NATiveNetworkID)
+	d.Set("native_networkconf_id", resp.NativeNetworkID)
 	d.Set("name", resp.Name)
 	d.Set("op_mode", resp.OpMode)
 	d.Set("poe_mode", resp.PoeMode)
