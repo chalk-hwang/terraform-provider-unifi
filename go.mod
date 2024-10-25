@@ -11,7 +11,7 @@ require (
 	// Deprecated from paultyng/go-unifi - UnifiVersion = "7.4.162"
 	// github.com/paultyng/go-unifi v1.30.1
 	github.com/chalk-hwang/go-unifi v1.0.3
-	github.com/deckarep/golang-set/v2 v2.3.1
+	github.com/deckarep/golang-set/v2 v2.6.0
 	github.com/golangci/golangci-lint v1.61.0
 	github.com/hashicorp/go-version v1.7.0
 	github.com/hashicorp/terraform-plugin-docs v0.16.0
