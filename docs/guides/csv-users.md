@@ -2,7 +2,7 @@
 subcategory: ""
 page_title: "Manage Users/Clients in a CSV - Unifi Provider"
 description: |-
-    An example of using a CSV to manage all of your users of your network.
+  An example of using a CSV to manage all of your users of your network.
 ---
 
 # Manage Users in a CSV

@@ -2,7 +2,7 @@
 subcategory: ""
 page_title: "Manage Firewall Rules for Multiple Sites - Unifi Provider"
 description: |-
-    An example of applying firewall rules to multiple sites.
+  An example of applying firewall rules to multiple sites.
 ---
 
 # Manage Firewall Rules for Multiple Sites
