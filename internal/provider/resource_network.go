@@ -6,10 +6,10 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/chalk-hwang/go-unifi/unifi"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/chalk-hwang/go-unifi/unifi"
 	// "github.com/paultyng/go-unifi/unifi" (old go-unifi version)
 )
 
