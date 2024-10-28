@@ -71,9 +71,6 @@ github.com/Microsoft/go-winio/internal/fs
 github.com/Microsoft/go-winio/internal/socket
 github.com/Microsoft/go-winio/internal/stringbuffer
 github.com/Microsoft/go-winio/pkg/guid
-# github.com/Microsoft/hcsshim v0.11.7
-## explicit; go 1.21
-github.com/Microsoft/hcsshim/osversion
 # github.com/OpenPeeDeeP/depguard/v2 v2.2.0
 ## explicit; go 1.20
 github.com/OpenPeeDeeP/depguard/v2
@@ -344,7 +341,6 @@ github.com/containerd/containerd/leases
 github.com/containerd/containerd/namespaces
 github.com/containerd/containerd/pkg/randutil
 github.com/containerd/containerd/pkg/userns
-github.com/containerd/containerd/platforms
 github.com/containerd/containerd/protobuf
 github.com/containerd/containerd/protobuf/types
 github.com/containerd/containerd/reference
@@ -378,7 +374,7 @@ github.com/containerd/ttrpc
 # github.com/containerd/typeurl/v2 v2.1.1
 ## explicit; go 1.13
 github.com/containerd/typeurl/v2
-# github.com/cpuguy83/dockercfg v0.3.1
+# github.com/cpuguy83/dockercfg v0.3.2
 ## explicit; go 1.13
 github.com/cpuguy83/dockercfg
 # github.com/curioswitch/go-reassign v0.2.0
@@ -1620,8 +1616,8 @@ github.com/subosito/gotenv
 # github.com/tdakkota/asciicheck v0.2.0
 ## explicit; go 1.18
 github.com/tdakkota/asciicheck
-# github.com/testcontainers/testcontainers-go v0.32.0
-## explicit; go 1.21
+# github.com/testcontainers/testcontainers-go v0.34.0
+## explicit; go 1.22
 github.com/testcontainers/testcontainers-go
 github.com/testcontainers/testcontainers-go/exec
 github.com/testcontainers/testcontainers-go/internal
@@ -1629,8 +1625,8 @@ github.com/testcontainers/testcontainers-go/internal/config
 github.com/testcontainers/testcontainers-go/internal/core
 github.com/testcontainers/testcontainers-go/internal/core/network
 github.com/testcontainers/testcontainers-go/wait
-# github.com/testcontainers/testcontainers-go/modules/compose v0.32.0
-## explicit; go 1.21
+# github.com/testcontainers/testcontainers-go/modules/compose v0.34.0
+## explicit; go 1.22
 github.com/testcontainers/testcontainers-go/modules/compose
 # github.com/tetafro/godot v1.4.17
 ## explicit; go 1.20

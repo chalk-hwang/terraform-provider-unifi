@@ -32,6 +32,7 @@ type composeStackOptions struct {
 	Paths          []string
 	temporaryPaths map[string]bool
 	Logger         testcontainers.Logging
+	Profiles       []string
 }
 
 type ComposeStackOption interface {
@@ -116,6 +117,11 @@ func WithStackReaders(readers ...io.Reader) ComposeStackOption {
 	return ComposeStackReaders(readers)
 }
 
+// WithProfiles allows to enable/disable services based on the profiles defined in the compose file.
+func WithProfiles(profiles ...string) ComposeStackOption {
+	return ComposeProfiles(profiles)
+}
+
 func NewDockerCompose(filePaths ...string) (*dockerCompose, error) {
 	return NewDockerComposeWith(WithStackFiles(filePaths...))
 }
@@ -125,11 +131,12 @@ func NewDockerComposeWith(opts ...ComposeStackOption) (*dockerCompose, error) {
 		Identifier:     uuid.New().String(),
 		temporaryPaths: make(map[string]bool),
 		Logger:         testcontainers.Logger,
+		Profiles:       nil,
 	}
 
 	for i := range opts {
 		if err := opts[i].applyToComposeStack(&composeOptions); err != nil {
-			return nil, err
+			return nil, fmt.Errorf("apply compose stack option: %w", err)
 		}
 	}
 
@@ -139,28 +146,11 @@ func NewDockerComposeWith(opts ...ComposeStackOption) (*dockerCompose, error) {
 
 	dockerCli, err := command.NewDockerCli()
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("new docker client: %w", err)
 	}
 
 	if err = dockerCli.Initialize(flags.NewClientOptions(), command.WithInitializeClient(makeClient)); err != nil {
-		return nil, err
-	}
-
-	reaperProvider, err := testcontainers.NewDockerProvider()
-	if err != nil {
-		return nil, fmt.Errorf("failed to create reaper provider for compose: %w", err)
-	}
-
-	var composeReaper *testcontainers.Reaper
-	if !reaperProvider.Config().Config.RyukDisabled {
-		// NewReaper is deprecated: we need to find a way to create the reaper for compose
-		// bypassing the deprecation.
-		r, err := testcontainers.NewReaper(context.Background(), testcontainers.SessionID(), reaperProvider, "")
-		if err != nil {
-			return nil, fmt.Errorf("failed to create reaper for compose: %w", err)
-		}
-
-		composeReaper = r
+		return nil, fmt.Errorf("initialize docker client: %w", err)
 	}
 
 	composeAPI := &dockerCompose{
@@ -168,13 +158,13 @@ func NewDockerComposeWith(opts ...ComposeStackOption) (*dockerCompose, error) {
 		configs:          composeOptions.Paths,
 		temporaryConfigs: composeOptions.temporaryPaths,
 		logger:           composeOptions.Logger,
+		projectProfiles:  composeOptions.Profiles,
 		composeService:   compose.NewComposeService(dockerCli),
 		dockerClient:     dockerCli.Client(),
 		waitStrategies:   make(map[string]wait.Strategy),
 		containers:       make(map[string]*testcontainers.DockerContainer),
 		networks:         make(map[string]*testcontainers.DockerNetwork),
 		sessionID:        testcontainers.SessionID(),
-		reaper:           composeReaper,
 	}
 
 	return composeAPI, nil
