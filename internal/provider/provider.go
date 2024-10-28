@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/chalk-hwang/go-unifi/unifi"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/chalk-hwang/go-unifi/unifi"
 )
 
 func init() {

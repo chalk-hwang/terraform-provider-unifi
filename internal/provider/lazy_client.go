@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/logging"
 	"github.com/chalk-hwang/go-unifi/unifi"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/logging"
 )
 
 type lazyClient struct {
