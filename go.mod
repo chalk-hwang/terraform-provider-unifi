@@ -8,9 +8,6 @@ go 1.22.5
 
 require (
 	github.com/apparentlymart/go-cidr v1.1.0
-	// Deprecated from paultyng/go-unifi - UnifiVersion = "7.4.162"
-	// github.com/paultyng/go-unifi v1.30.1
-	github.com/chalk-hwang/go-unifi v1.0.3
 	github.com/deckarep/golang-set/v2 v2.6.0
 	github.com/golangci/golangci-lint v1.61.0
 	github.com/hashicorp/go-version v1.7.0
@@ -84,6 +81,7 @@ require (
 	github.com/ccojocar/zxcvbn-go v1.0.2 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/chalk-hwang/go-unifi v1.0.3 // indirect
 	github.com/charithe/durationcheck v0.0.10 // indirect
 	github.com/chavacava/garif v0.1.0 // indirect
 	github.com/ckaznocha/intrange v0.2.0 // indirect
