@@ -1,4 +1,3 @@
----
 linters:
   disable-all: true
   enable:
@@ -14,6 +13,5 @@ linters:
     # - "structcheck"
     - "unconvert"
     - "unused"
-
 run:
-  timeout: '5m'
+  timeout: "5m"

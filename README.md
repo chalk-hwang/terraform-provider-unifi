@@ -12,7 +12,6 @@ Browse the official provider documentation on the [Terraform provider registry](
 
 As of **version v1.0.1**, this provider supports **UniFi Controller v8.4.59**. Earlier versions, up to **v7.4.162**, were supported in the original [paultyng](https://github.com/paultyng/terraform-provider-unifi) release.
 
-
 ## Development Status
 
 This provider is currently under active development, with efforts to update compatibility with the latest UniFi Network Controller version **v8.4.59**. While significant progress has been made, **only a few features are fully tested and confirmed to work**:
@@ -66,4 +65,3 @@ Contributions are highly appreciated to ensure better compatibility with the lat
 ## Disclaimer
 
 This project is in an **experimental state**, and users should proceed with caution when using it in production environments. Expect rapid changes and potentially breaking updates as development progresses.
-
