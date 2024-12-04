@@ -8,7 +8,7 @@ go 1.22.5
 
 require (
 	github.com/apparentlymart/go-cidr v1.1.0
-	github.com/deckarep/golang-set/v2 v2.6.0
+	github.com/deckarep/golang-set/v2 v2.7.0
 	github.com/golangci/golangci-lint v1.61.0
 	github.com/hashicorp/go-version v1.7.0
 	github.com/hashicorp/terraform-plugin-docs v0.19.4
@@ -18,7 +18,10 @@ require (
 	github.com/testcontainers/testcontainers-go/modules/compose v0.34.0
 )
 
-require github.com/hashicorp/terraform-plugin-log v0.9.0
+require (
+	github.com/chalk-hwang/go-unifi v1.0.3
+	github.com/hashicorp/terraform-plugin-log v0.9.0
+)
 
 require (
 	4d63.com/gocheckcompilerdirectives v1.2.1 // indirect
@@ -81,7 +84,6 @@ require (
 	github.com/ccojocar/zxcvbn-go v1.0.2 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/chalk-hwang/go-unifi v1.0.3 // indirect
 	github.com/charithe/durationcheck v0.0.10 // indirect
 	github.com/chavacava/garif v0.1.0 // indirect
 	github.com/ckaznocha/intrange v0.2.0 // indirect
